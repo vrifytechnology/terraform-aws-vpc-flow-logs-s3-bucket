@@ -123,15 +123,3 @@ variable "versioning_enabled" {
   description = "Enable object versioning, keeping multiple variants of an object in the same bucket"
   default     = true
 }
-
-variable "s3_object_ownership" {
-  type        = string
-  default     = "BucketOwnerPreferred"
-  description = "Specifies the S3 object ownership control. Valid values are `ObjectWriter`, `BucketOwnerPreferred`, and 'BucketOwnerEnforced'."
-}
-
-variable "acl" {
-  type        = string
-  description = "The canned ACL to apply. We recommend log-delivery-write for compatibility with AWS services"
-  default     = "log-delivery-write"
-}
